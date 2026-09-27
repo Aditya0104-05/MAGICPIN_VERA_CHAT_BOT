@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4338A5" />
+  <title>Vera — magicpin Merchant Growth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo-wrap"><img src="./magicpin-logo.png" alt="magicpin" /></div>
+        <div class="brand-copy"><strong>VERA</strong><span>merchant AI</span></div>
+      </div>
+
+      <div class="workspace-pill"><span class="pulse"></span><span>Growth workspace</span></div>
+
+      <nav class="nav">
+        <div class="nav-label">WORKSPACE</div>
+        <button class="nav-item active" data-view="overview"><span>⌂</span>Overview</button>
+        <button class="nav-item" data-view="conversations"><span>◌</span>Conversations</button>
+        <button class="nav-item" data-view="signals"><span>⌁</span>Signals</button>
+        <button class="nav-item" data-view="campaigns"><span>✦</span>Campaigns</button>
+        <div class="nav-label">ENGINE</div>
+        <button class="nav-item" data-view="context"><span>◈</span>Context Lab</button>
+        <button class="nav-item" data-view="api"><span>⌘</span>API status</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="engine-card">
+          <div class="engine-orb"><span>V</span></div>
+          <div><strong>Vera engine</strong><small>Deterministic · grounded</small></div>
+          <span class="status-dot"></span>
+        </div>
+        <div class="profile"><div class="avatar">VS</div><div><strong>Vera Studio</strong><span>Challenge workspace</span></div><button>•••</button></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong>Merchant growth</strong></div>
+        <div class="top-actions">
+          <div class="api-chip" id="apiChip"><span class="mini-dot"></span><span id="apiText">Backend not checked</span></div>
+          <button class="icon-btn" title="Refresh" id="refreshBtn">↻</button>
+          <button class="user-btn"><span>VS</span><b>Vera Studio</b><i>⌄</i></button>
+        </div>
+      </header>
+
+      <div class="content" id="app">
+        <section class="view active" id="view-overview">
+          <div class="hero-row">
+            <div>
+              <div class="eyebrow"><span class="eyebrow-dot"></span> AI MERCHANT GROWTH ENGINE</div>
+              <h1>Good morning. <em>Let’s grow</em> smarter.</h1>
+              <p class="hero-sub">Vera turns live merchant signals into grounded, reply-ready actions — without the generic chatbot fluff.</p>
+            </div>
+            <div class="hero-actions">
+              <button class="btn ghost" id="loadDemoBtn">Load demo context</button>
+              <button class="btn primary" id="tickBtn"><span>✦</span> Run Vera tick</button>
+            </div>
+          </div>
+
+          <div class="stat-grid">
+            <article class="stat-card accent-pink"><div class="stat-top"><span>Merchant reach</span><span class="stat-icon">↗</span></div><strong>10.2k</strong><div class="stat-foot"><span class="up">+14.8%</span> vs last week</div></article>
+            <article class="stat-card"><div class="stat-top"><span>Signals ready</span><span class="stat-icon">⌁</span></div><strong id="signalCount">12</strong><div class="stat-foot"><span class="neutral">4 urgent</span> · 8 opportunistic</div></article>
+            <article class="stat-card"><div class="stat-top"><span>Reply intent</span><span class="stat-icon">◎</span></div><strong>68%</strong><div class="stat-foot"><span class="up">+9.2%</span> after personalization</div></article>
+            <article class="stat-card"><div class="stat-top"><span>Avg. response</span><span class="stat-icon">◷</span></div><strong>4.8<span class="unit">ms</span></strong><div class="stat-foot"><span class="up">Deterministic</span> engine</div></article>
+          </div>
+
+          <div class="dashboard-grid">
+            <section class="panel conversation-panel">
+              <div class="panel-head"><div><span class="section-kicker">LIVE CONVERSATION</span><h2>Vera × Dr. Meera</h2></div><span class="live-badge"><i></i> Active</span></div>
+              <div class="conversation-meta"><span>Dental clinic · Lajpat Nagar, Delhi</span><span class="context-badge">Research digest</span></div>
+              <div class="chat" id="chat">
+                <div class="message vera"><div class="msg-avatar">V</div><div><div class="bubble">Dr. Meera, JIDA’s Oct issue landed. One item relevant to your <b>124 high-risk adult patients</b> — a 2,100-patient trial found 3-month fluoride recall had 38% lower caries recurrence than 6-month recall.<div class="source">JIDA Oct 2026 · p.14</div></div><span class="msg-time">Vera · 10:30 AM</span></div></div>
+                <div class="message merchant"><div><div class="bubble">Interesting. Can you draft something I can send to patients?</div><span class="msg-time">Dr. Meera · 10:32 AM</span></div><div class="msg-avatar merchant-avatar">DM</div></div>
+                <div class="message vera"><div class="msg-avatar">V</div><div><div class="bubble">Absolutely. I can draft a short patient-friendly WhatsApp using your clinic’s existing recall context. <b>Want me to draft it?</b></div><span class="msg-time">Vera · 10:32 AM</span></div></div>
+              </div>
+              <div class="composer-bar"><input id="replyInput" placeholder="Reply as the merchant…" /><button id="replyBtn">Send <span>↗</span></button></div>
+            </section>
+
+            <aside class="panel signal-panel">
+              <div class="panel-head"><div><span class="section-kicker">WHY NOW</span><h2>Signal stack</h2></div><button class="more">•••</button></div>
+              <div class="signal-list">
+                <button class="signal selected"><span class="signal-icon pink">✦</span><div><b>Research digest</b><small>JIDA fluoride recall update</small></div><span class="signal-time">Now</span></button>
+                <button class="signal"><span class="signal-icon purple">↘</span><div><b>CTR below peer</b><small>2.1% vs 3.0% benchmark</small></div><span class="signal-time">2h</span></button>
+                <button class="signal"><span class="signal-icon orange">◷</span><div><b>Posts are stale</b><small>Last Google post · 22 days</small></div><span class="signal-time">5h</span></button>
+                <button class="signal"><span class="signal-icon blue">♡</span><div><b>High-risk cohort</b><small>124 adults in active roster</small></div><span class="signal-time">1d</span></button>
+              </div>
+              <div class="signal-footer"><span>Suppression protected</span><b>4 / 4</b></div>
+            </aside>
+          </div>
+
+          <div class="bottom-grid">
+            <section class="panel performance-panel"><div class="panel-head"><div><span class="section-kicker">MERCHANT HEALTH</span><h2>Dr. Meera’s profile</h2></div><button class="link-btn">View merchant →</button></div><div class="merchant-summary"><div class="merchant-avatar">DM</div><div class="merchant-name"><strong>Dr. Meera’s Dental Clinic</strong><span>Verified · Pro · 82 days remaining</span></div><div class="health-score"><strong>82</strong><span>/ 100 health</span></div></div><div class="metrics"><div><span>Views</span><b>2,410</b><small class="up">+18%</small></div><div><span>Calls</span><b>18</b><small class="down">−5%</small></div><div><span>Directions</span><b>45</b><small class="up">+11%</small></div><div><span>CTR</span><b>2.1%</b><small class="down">vs 3.0%</small></div></div></section>
+            <section class="panel offer-panel"><div class="panel-head"><div><span class="section-kicker">OFFER CATALOG</span><h2>Live offers</h2></div><button class="link-btn">Manage →</button></div><div class="offer"><div class="offer-thumb">🦷</div><div><strong>Dental Cleaning @ ₹299</strong><span>Active · New users</span></div><span class="offer-live">LIVE</span></div><div class="offer muted"><div class="offer-thumb">+</div><div><strong>Deep Cleaning @ ₹499</strong><span>Expired · Feb 28</span></div><span class="offer-off">OFF</span></div></section>
+          </div>
+        </section>
+
+        <section class="view" id="view-conversations"><div class="page-title"><div><span class="section-kicker">CONVERSATIONS</span><h1>Conversation center</h1><p>Stateful merchant and customer threads handled by Vera.</p></div><button class="btn primary" id="convTick">Run proactive tick</button></div><div class="conversation-layout"><div class="thread-list panel"><div class="thread-search">⌕ <input placeholder="Search conversations" /></div><button class="thread active"><div class="thread-avatar pink-bg">DM</div><div><b>Dr. Meera’s Dental Clinic</b><span>Can you draft something…</span></div><small>2m</small></button><button class="thread"><div class="thread-avatar purple-bg">S11</div><div><b>Studio11 Salon</b><span>Bridal season planning</span></div><small>18m</small></button><button class="thread"><div class="thread-avatar orange-bg">PJ</div><div><b>Pizza Junction</b><span>Match-night combo signal</span></div><small>1h</small></button><button class="thread"><div class="thread-avatar blue-bg">PH</div><div><b>PowerHouse Gym</b><span>Trial acquisition window</span></div><small>3h</small></button></div><div class="panel full-chat"><div class="panel-head"><div><span class="section-kicker">THREAD</span><h2>Dr. Meera’s Dental Clinic</h2></div><span class="live-badge"><i></i> Stateful</span></div><div class="chat large" id="chatLarge"></div><div class="composer-bar"><input placeholder="Type a reply…" /><button>Send ↗</button></div></div></div></section>
+
+        <section class="view" id="view-signals"><div class="page-title"><div><span class="section-kicker">SIGNAL INTELLIGENCE</span><h1>What should Vera notice next?</h1><p>Prioritized from trigger urgency, merchant state, category fit and suppression rules.</p></div></div><div class="signal-cards"><article class="signal-big pink-line"><span>01 · HIGH PRIORITY</span><h2>Research digest</h2><p>JIDA fluoride recall finding maps directly to a 124-person high-risk adult cohort.</p><div><b>Merchant fit</b><strong>98%</strong></div></article><article class="signal-big purple-line"><span>02 · ACTIONABLE</span><h2>CTR gap</h2><p>2.1% CTR trails the 3.0% metro dental benchmark. Existing profile is otherwise healthy.</p><div><b>Opportunity</b><strong>0.9pp</strong></div></article><article class="signal-big orange-line"><span>03 · FRESHNESS</span><h2>Stale posts</h2><p>Google posts have been inactive for 22 days and the merchant previously accepted a draft request.</p><div><b>Conversation intent</b><strong>High</strong></div></article></div></section>
+
+        <section class="view" id="view-campaigns"><div class="page-title"><div><span class="section-kicker">CAMPAIGN WORKSPACE</span><h1>Grounded campaign ideas</h1><p>Every recommendation stays inside the merchant’s live offer catalog.</p></div><button class="btn primary">+ New campaign</button></div><div class="campaign-grid"><article class="campaign-card"><div class="campaign-icon pink">✦</div><span>Dental · Research</span><h2>Recall education</h2><p>Use the JIDA research signal to draft a patient education message, then route for merchant approval.</p><button>Draft message →</button></article><article class="campaign-card"><div class="campaign-icon purple">↗</div><span>Profile · Performance</span><h2>Improve CTR</h2><p>Refresh stale Google posts around the merchant’s existing whitening and aligner interests.</p><button>Open action →</button></article><article class="campaign-card"><div class="campaign-icon orange">₹</div><span>Offer · Live catalog</span><h2>Cleaning @ ₹299</h2><p>Use a service + price pattern instead of a generic percentage discount.</p><button>Use offer →</button></article></div></section>
+
+        <section class="view" id="view-context"><div class="page-title"><div><span class="section-kicker">4-CONTEXT COMPOSER</span><h1>Context Lab</h1><p>Inspect exactly what Vera uses before composing the next message.</p></div><button class="btn ghost" id="loadContextBtn">Load demo context</button></div><div class="context-grid"><article class="context-card"><div class="context-head"><span class="context-no">01</span><div><b>Category</b><small>How should Vera talk?</small></div></div><div class="context-value">Dentists</div><div class="tags"><span>peer clinical</span><span>hi-en natural</span><span>no medical guarantees</span></div></article><article class="context-card"><div class="context-head"><span class="context-no">02</span><div><b>Merchant</b><small>Who are we helping?</small></div></div><div class="context-value">Dr. Meera’s Dental Clinic</div><div class="tags"><span>Delhi · Lajpat Nagar</span><span>CTR 2.1%</span><span>124 high-risk adults</span></div></article><article class="context-card"><div class="context-head"><span class="context-no">03</span><div><b>Trigger</b><small>Why message now?</small></div></div><div class="context-value">Research digest</div><div class="tags"><span>JIDA Oct 2026</span><span>urgency 2</span><span>suppressed after send</span></div></article><article class="context-card"><div class="context-head"><span class="context-no">04</span><div><b>Customer</b><small>Who is the recipient?</small></div></div><div class="context-value">Optional / resolved</div><div class="tags"><span>Priya</span><span>weekday evening</span><span>WhatsApp opt-in</span></div></article></div></section>
+
+        <section class="view" id="view-api"><div class="page-title"><div><span class="section-kicker">RUNTIME</span><h1>API status</h1><p>The frontend never changes the Vera backend contract. It only calls the existing endpoints.</p></div><button class="btn primary" id="healthBtn">Check backend</button></div><div class="api-grid"><article class="api-card"><span>GET</span><b>/v1/healthz</b><small>Service liveness and loaded context counts</small><i id="healthStatus">Not checked</i></article><article class="api-card"><span>GET</span><b>/v1/metadata</b><small>Bot identity and engine metadata</small><i>Available</i></article><article class="api-card"><span>POST</span><b>/v1/context</b><small>Idempotent context ingestion</small><i>Used by demo loader</i></article><article class="api-card"><span>POST</span><b>/v1/tick</b><small>Proactive trigger evaluation</small><i>Ready</i></article><article class="api-card"><span>POST</span><b>/v1/reply</b><small>Stateful reply handling</small><i>Ready</i></article></div><div class="endpoint-note"><b>Backend URL</b><input id="apiBase" value="http://localhost:8080" /><button id="saveApi">Save</button><span>Set this to your deployed bot URL when the frontend is hosted separately.</span></div></section>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
