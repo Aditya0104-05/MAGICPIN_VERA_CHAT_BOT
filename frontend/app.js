@@ -1,4 +1,4 @@
-const state={apiBase:localStorage.getItem('vera_api_base')||'https://magicpin-vera-chat-bot.onrender.com',demoLoaded:false};
+const state={apiBase:'https://magicpin-vera-chat-bot.onrender.com',demoLoaded:false};
 const $=s=>document.querySelector(s); const $$=s=>document.querySelectorAll(s);
 function toast(msg){const el=$('#toast');el.textContent=msg;el.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>el.classList.remove('show'),2600)}
 function apiUrl(path){return state.apiBase.replace(/\/$/,'')+path}

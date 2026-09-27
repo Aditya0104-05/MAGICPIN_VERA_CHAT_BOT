@@ -19,6 +19,7 @@ from datetime import datetime
 from typing import Dict, Any, List, Optional, Tuple
 
 from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
@@ -29,6 +30,17 @@ app = FastAPI(
     title="magicpin Vera AI Assistant",
     description="Context-grounded merchant growth & customer engagement bot",
     version="1.0.0"
+)
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://magicpin-vera-chat-bot.vercel.app"
+    ],
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["*"],
 )
 
 START_TIME = time.time()
